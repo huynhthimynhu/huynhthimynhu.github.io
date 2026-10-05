@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Cá Nhân - Huỳnh Thị Mỹ Như</title>
+    <!-- Import Google Fonts cho font chữ trẻ trung, hiện đại -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET & CẤU HÌNH CHUNG --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #fff5f7; /* Nền hồng siêu nhạt, dịu mắt */
+            color: #4a4a4a;
+            line-height: 1.6;
+            padding: 20px 10px;
+        }
+
+        /* Khung chứa tổng thể (Container) */
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+            padding: 30px 40px;
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px dashed #f8cbda;
+        }
+
+        header h1 {
+            color: #d85a7f;
+            font-size: 2rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #d85a7f;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 20px;
+            background-color: #ffeef2;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #f8a5c2;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* --- NỘI DUNG CHÍNH (MAIN) --- */
+        main {
+            margin-top: 30px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            color: #c9436b;
+            font-size: 1.35rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 20px;
+            background-color: #f8a5c2;
+            border-radius: 4px;
+        }
+
+        /* Khối thông tin cá nhân */
+        .profile-card {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background: #fff9fa;
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid #ffe3ec;
+        }
+
+        .profile-img img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #f8a5c2;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .profile-info h3 {
+            color: #2c2c2c;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .profile-info p {
+            margin-bottom: 8px;
+            color: #666;
+        }
+
+        .profile-info a {
+            color: #d85a7f;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .profile-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Danh sách Sở thích & Kỹ năng */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card-box {
+            background: #fff9fa;
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid #ffe3ec;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 5px;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        ul li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: #f8a5c2;
+            font-size: 0.9rem;
+        }
+
+        /* --- BẢNG THỜI KHÓA BIỂU --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        thead {
+            background-color: #f8a5c2;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tbody tr {
+            background-color: #ffffff;
+            border-bottom: 1px solid #ffe3ec;
+            transition: background 0.2s;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #fff9fa;
+        }
+
+        tbody tr:hover {
+            background-color: #ffeef2;
+        }
+
+        tbody td:first-child {
+            font-weight: 600;
+            color: #d85a7f;
+        }
+
+        /* --- FORM LIÊN HỆ --- */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1.5px solid #ffd0df;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.3s ease;
+            background-color: #fff9fa;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #f8a5c2;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 4px rgba(248, 165, 194, 0.2);
+        }
+
+        button[type="submit"] {
+            background-color: #f8a5c2;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(248, 165, 194, 0.4);
+        }
+
+        button[type="submit"]:hover {
+            background-color: #d85a7f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(216, 90, 127, 0.4);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 2px dashed #f8cbda;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        footer strong {
+            color: #d85a7f;
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .grid-2col {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Phần đầu trang -->
+        <header>
+            <h1>Thông Tin Cá Nhân</h1>
+            <nav>
+                <a href="#gioi-thieu">Giới thiệu</a>
+                <a href="#so-thich-ky-nang">Sở thích & Kỹ năng</a>
+                <a href="#lien-he">Liên hệ</a>
+            </nav>
+        </header>
+
+        <!-- Nội dung chính -->
+        <main>
+            <!-- Section: Giới thiệu chung -->
+            <section id="gioi-thieu">
+                <h2>Giới Thiệu Chung</h2>
+                <div class="profile-card">
+                    <div class="profile-img">
+                        <img src="mnhu.jpg" alt="Ảnh cá nhân của Huỳnh Thị Mỹ Như">
+                    </div>
+                    <div class="profile-info">
+                        <h3>Họ và tên: Huỳnh Thị Mỹ Như</h3>
+                        <p><b>Giới thiệu ngắn:</b> Xin chào mọi người nha! Mình rất vui được làm quen với các bạn.</p>
+                        <p><b>Mạng xã hội:</b> 
+                            <a href="https://www.facebook.com/mitskaiwa/" target="_blank">Facebook</a> | 
+                            <a href="https://github.com/huynhthimynhu/huynhthimynhu.github.io" target="_blank">Github</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Sở thích & Kỹ năng (Xếp ngang 2 cột) -->
+            <section id="so-thich-ky-nang" class="grid-2col">
+                <div class="card-box">
+                    <h2>Sở Thích</h2>
+                    <ul>
+                        <li>Nghe nhạc</li>
+                        <li>Xem phim</li>
+                    </ul>
+                </div>
+
+                <div class="card-box">
+                    <h2>Kỹ Năng</h2>
+                    <ul>
+                        <li>Nấu ăn</li>
+                        <li>Giải quyết vấn đề</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section: Bảng Thời khóa biểu -->
+            <section id="thoi-khoa-bieu">
+                <h2>Thời Khóa Biểu Học Tập</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Buổi</th>
+                            <th>Thứ 2</th>
+                            <th>Thứ 3</th>
+                            <th>Thứ 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sáng</td>
+                            <td>Đi học</td>
+                            <td>Nấu ăn</td>
+                            <td>Tự nghiên cứu bài</td>
+                        </tr>
+                        <tr>
+                            <td>Chiều</td>
+                            <td>Xem phim</td>
+                            <td>Tự học / Đọc sách</td>
+                            <td>Đi dạo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Section: Form liên hệ -->
+            <section id="lien-he" class="card-box">
+                <h2>Form Liên Hệ</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="fullname">Họ và tên:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Nhập họ tên của bạn...">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email liên hệ:</label>
+                        <input type="email" id="email" name="email" placeholder="Nhập email của bạn...">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Lời nhắn:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Nhập nội dung lời nhắn..."></textarea>
+                    </div>
+                    <button type="submit">Gửi Tin Nhắn</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Phần chân trang -->
+        <footer>
+            <p>Thông tin liên hệ trực tiếp: Zalo: <strong>0396166044</strong></p>
+        </footer>
+    </div>
+
+</body>
+</html>
