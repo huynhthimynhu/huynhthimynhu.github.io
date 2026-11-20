@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ cá</title>
+    <style>
+       #hoca {
+             position: fixed; 
+             bottom: 0; 
+             height: 75%; 
+             width: 98%;
+             background-color: #ADD8E6; 
+             background-size: cover;
+             background-position: center;
+             border-left: 2px double blue;
+             border-right: 2px double blue;
+             border-top: 0;
+             overflow: hidden;
+       }
+       .caboi {
+             position: absolute;
+             left: 0px; 
+             top: 400px;
+             width: 200px; 
+             height: 200px;
+             animation: coboi 15s linear infinite;
+       }
+       @keyframes coboi {
+            0%   { left: 50px; top: 100px; transform: scaleX(1); }
+            25%  { left: 700px; top: 200px; transform: scaleX(1); }
+            50%  { left: 400px; top: 300px; transform: scaleX(-1); }
+            75%  { left: 200px; top: 150px; transform: scaleX(-1); }
+            100% { left: 50px; top: 100px; transform: scaleX(1); }
+       }
+    </style>
+</head>
+<body>
+    <div id="hoca">
+        <img src="goldFishSchool.png" alt="cá bơi" class="caboi">
+    </div>
+</body>
+</html>
