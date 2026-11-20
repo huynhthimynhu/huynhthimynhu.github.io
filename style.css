@@ -1,0 +1,216 @@
+- {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fdfbfb; /* Nền trắng hồng nhạt cực kỳ dịu mắt */
+    color: #4a4a4a; /* Chữ xám đậm thay vì đen tuyền để tạo sự mềm mại */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(219, 112, 147, 0.08); /* Đổ bóng nhẹ ánh hồng */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d87093; /* Hồng pastel đậm vừa (PaleVioletRed) làm điểm nhấn thương hiệu */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #6c757d;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #d87093; /* Chuyển sang hồng sang trọng khi rê chuột */
+}
+
+.hero {
+    /* Gradient chuyển từ hồng pastel sang hồng tím khói nhẹ nhàng, không bị chói */
+    background: linear-gradient(rgba(216, 112, 147, 0.85), rgba(150, 90, 120, 0.9)), url('https://unsplash.com') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    opacity: 0.95;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #d87093; /* Chữ nút màu hồng pastel */
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #b55375; /* Hồng trầm hơn khi hover */
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.features {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(216, 112, 147, 0.06); /* Đổ bóng hồng nhẹ tinh tế */
+    border: 1px solid #f8e6ec; /* Viền phớt hồng cực mỏng tạo độ nét cao cấp */
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card i {
+    font-size: 40px;
+    color: #d87093;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #4a4a4a;
+}
+
+.card p {
+    color: #777777;
+}
+
+footer {
+    background-color: #4a3b42; /* Footer dùng màu nâu hồng khói thay vì đen tuyền để giữ nguyên tổng thể ấm áp */
+    color: #fce4ec;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+.main-menu {
+    display: flex;
+    list-style: none;
+}
+
+.main-menu > li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.main-menu > li > a {
+    text-decoration: none;
+    color: #4a4a4a; /* Chữ xám mềm mại thay vì đen đậm */
+    font-weight: 500;
+    padding: 10px 0;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.main-menu > li > a:hover {
+    color: #d87093; /* Đổi sang hồng pastel đậm khi hover */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(216, 112, 147, 0.1); /* Đổ bóng phớt hồng nhẹ nhàng */
+    list-style: none;
+    min-width: 200px;
+    padding: 10px 0;
+    border-radius: 8px; /* Bo tròn mềm mại hơn một chút */
+    border: 1px solid #f8e6ec; /* Viền phớt hồng mỏng tinh tế */
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #555555;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #fcf4f7; /* Nền hồng sữa cực nhạt khi rê chuột */
+    color: #d87093; /* Chữ chuyển sang màu hồng chủ đạo */
+}
+
+.dropdown-header {
+    padding: 5px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #b58392; /* Tiêu đề nhóm dùng tone hồng đất trầm, sang trọng */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}

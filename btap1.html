@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Cá Nhân</title>
+</head>
+<body>
+
+    <!-- Thẻ <header> cho phần đầu trang -->
+    <header>
+        <h1>Thông tin cá nhân</h1>
+        <!-- Thẻ <nav> chứa các liên kết điều hướng trong trang -->
+        <nav>
+            <a href="#gioi-thieu">Giới thiệu</a> |
+            <a href="#so-thich-ky-nang">Sở thích</a> |
+            <a href="#lien-he">Lien hệ</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- Thẻ <main> chứa nội dung chính của trang web -->
+    <main>
+
+        <!-- Section: Giới thiệu chung -->
+        <section id="gioi-thieu">
+            <article>
+                <h2>Thông Tin Cá Nhân</h2>
+                <!-- Thẻ <img> dùng cho ảnh đại diện -->
+                <!-- Thẻ div bao ngoài sử dụng style flex để xếp các phần tử con nằm ngang -->
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+    
+    <!-- Phần khối ảnh -->
+    <div>
+        <img src="mnhu.jpg" alt="Ảnh cá nhân" style="width: 200px; height: auto;">
+    </div>
+
+    <!-- Phần khối thông tin chữ -->
+    <div>
+        <h3 style="margin-top: 0; font-weight: bold;">Họ và tên: Huỳnh Thị Mỹ Như</h3>
+        <p><b>Giới thiệu ngắn:</b> Xin chào mọi người nha</p>
+        <p><b>Mạng xã hội:</b> <a href="https://www.facebook.com/mitskaiwa/">Facebook</a> | <a href="https://github.com/huynhthimynhu/huynhthimynhu.github.io">Github</a></p>
+    </div>
+
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Section: Sở thích & Kỹ năng -->
+        <section id="so-thich">
+            <article>
+                <h2>Sở Thích</h2>
+                <!-- Thẻ <ul> danh sách sở thích -->
+                <ul>
+                    <li>Nghe nhạc</li>
+                    <li>Xem phim</li>
+                </ul>
+            </article>
+        </section>
+
+        <hr>
+        <article>
+                <h2>Kỹ Năng</h2>
+                <ul>
+                    <li>Nấu ăn</li>
+                    <li>Giải quyết vấn đề</li>
+                </ul>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Section: Bảng Thời khóa biểu -->
+        <section id="thoi-khoa-bieu">
+            <h2>Bảng Thời Khóa Biểu Học Tập</h2>
+            <!-- Thẻ <table> cho bảng -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Buổi</th>
+                        <th>Thứ 2</th>
+                        <th>Thứ 3</th>
+                        <th>Thứ 4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sáng</td>
+                        <td>Đi học</td>
+                        <td>Nấu ăn</td>
+                        <td>Tự nghiên cứu bài</td>
+                    </tr>
+                    <tr>
+                        <td>Chiều</td>
+                        <td>Xem phim</td>
+                        <td>Tự học / Đọc sách</td>
+                        <td>Đi dạo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+
+
+        <!-- Section: Form liên hệ -->
+        <section id="lien-he">
+            <h2>Form Liên Hệ</h2>
+            <!-- Thẻ <form> đơn giản -->
+            <form action="#" method="POST">
+                <p>
+                    <label for="fullname">Họ và tên:</label><br>
+                    <!-- Thẻ <input> -->
+                    <input type="text" id="fullname" name="fullname" placeholder="Nhập họ tên của bạn">
+                </p>
+                <p>
+                    <label for="email">Email liên hệ:</label><br>
+                    <input type="email" id="email" name="email" placeholder="Nhập email của bạn">
+                </p>
+                <p>
+                    <label for="message">Lời nhắn:</label><br>
+                    <!-- Thẻ <textarea> -->
+                    <textarea id="message" name="message" rows="4" cols="50" placeholder="Nhập nội dung lời nhắn..."></textarea>
+                </p>
+                <p>
+                    <!-- Thẻ <button> -->
+                    <button type="submit">Gửi</button>
+                </p>
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- Thẻ <footer> phần chân trang -->
+    <footer>
+        <p>Thông tin liên hệ trực tiếp: Zalo: 0396166044</p>
+    </footer>
+
+</body>
+</html>
