@@ -1,13 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-<title>Hello, World!</title>
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello, World!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: linear-gradient(135deg, #FFF5F7 0%, #FFE5EC 50%, #F8EDEB 100%);
+      color: #5E4B56;
+      padding: 20px;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 24px;
+      padding: 48px 40px;
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(216, 167, 177, 0.18);
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-4px);
+    }
+    .badge {
+      display: inline-block;
+      background-color: #FCE1E4;
+      color: #B56576;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+
+    .header-text h1 {
+      font-size: 26px;
+      font-weight: 600;
+      color: #4A3B42;
+      margin-bottom: 8px;
+    }
+
+    .header-text p {
+      font-size: 14px;
+      color: #8E7882;
+      margin-bottom: 32px;
+    }
+    .links-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .links-group span {
+      display: block;
+      width: 100%;
+    }
+
+    .links-group a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 16px 24px;
+      border-radius: 16px;
+      transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+  
+    .links-group span:first-child a {
+      background-color: #F4ACB7;
+      color: #FFFFFF;
+      box-shadow: 0 8px 20px rgba(244, 172, 183, 0.35);
+    }
+
+    .links-group span:first-child a:hover {
+      background-color: #E598A5;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(229, 152, 165, 0.45);
+    }
+
+    
+    .links-group span:last-child a {
+      background-color: #FFFFFF;
+      color: #B56576;
+      border: 1.5px solid #F4ACB7;
+    }
+
+    .links-group span:last-child a:hover {
+      background-color: #FFF0F3;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(244, 172, 183, 0.2);
+    }
+
+
+    .links-group a:active {
+      transform: scale(0.98);
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-<span><a href="cvcanhan.html">CV của tui</a></span>
-<span><a href="baihoca.html">Hồ cá chill chill </a></span>
-</div>
+  <div class="container">
+    <div class="header-text">
+      <span class="badge">Welcome</span>
+      <h1>Góc nhỏ của tui</h1>
+      <p>Chọn một nơi bạn muốn ghé thăm nhé ✨</p>
+    </div>
+
+    <div class="links-group">
+      <span><a href="cvcanhan.html">📄 CV của tui</a></span>
+      <span><a href="baihoca.html">🐟 Hồ cá chill chill</a></span>
+    </div>
+  </div>
 </body>
 </html>
